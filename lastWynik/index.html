@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>80 lat ZS Jasieniec</title>
+  <link rel="stylesheet" type="text/css" href="/_data/css.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="https://zspjasieniec.pl/images/119142550_254950055632304_3148569303522903387_n.png">
+</head>
+<body>
+  <div class="navbar">
+    <a href="https://zspjasieniec.pl" class="navlink">Strona szkoły</a>
+    <a href="/" class="navlink">Powrót</a>
+  </div>
+  <div class="quiz"></div>
+  <div id="quiz" class="quiiz">
+    <h1>80 lat ZS Jasieniec</h1>
+    <h1>Ostatni wynik:</h1>
+      <h3>Gratulujemy <span id="wynik-name">Anonim</span> ukończenia quizu z wynikiem:</h3>
+      <p><span id="wynik-score">#</span> / <span id="wynik-scoremax">#</span></p>
+    </div>
+  <script>
+//    function getCookie(cname) {
+//  let name = cname + "=";
+//  let decodedCookie = decodeURIComponent(document.cookie);
+//  let ca = decodedCookie.split(';');
+//  for(let i = 0; i < ca.length; i++) {
+//    let c = ca[i];
+//    while (c.charAt(0) == ' ') {
+//      c = c.substring(1);
+//    }
+//    if (c.indexOf(name) == 0) {
+//      return c.substring(name.length, c.length);
+//    }
+//  }
+//  return "";
+//}
+    function getLocalStorage(lsname) {
+      var answer = localStorage.getItem(lsname);
+      return answer;
+  }
+    // let user = getCookie("username");
+    let user = getLocalStorage("username");
+    document.getElementById("wynik-name").innerHTML =
+    user;
+    // let score = getCookie("score");
+    let score = getLocalStorage("score");
+    document.getElementById("wynik-score").innerHTML =
+    score ;
+    // let scoremax = getCookie("scoremax");
+    let scoremax = getLocalStorage("scoremax");
+    document.getElementById("wynik-scoremax").innerHTML =
+    scoremax ;
+  </script>
+</body>
+</html>
